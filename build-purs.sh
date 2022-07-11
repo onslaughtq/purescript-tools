@@ -6,7 +6,7 @@ git clone https://github.com/purescript/purescript.git ~/purescript
 
 cd ~/purescript
 
-git checkout v0.14.5
+git checkout v0.15.4
 
 stack install --local-bin-path /usr/local/bin
 
