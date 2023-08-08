@@ -40,6 +40,10 @@ esac
 COMMAND=$1
 
 case $COMMAND in
+  build-local)
+    echo "Building $ARCH_TAG"
+    docker build -t $ARCH_TAG .
+    ;;
   build-and-push-arch-tag)
     echo "Building $ARCH_TAG"
     docker buildx build . \
