@@ -1,9 +1,9 @@
-FROM ghcr.io/flipstone/haskell-tools:debian-unstable-ghc-9.4.5-2023-07-18-1d8bf61 AS builder
+FROM ghcr.io/flipstone/haskell-tools:debian-stable-ghc-9.4.6-2023-08-29-52330cd AS builder
 
 COPY install-spago.sh /tmp/install-spago.sh
 RUN /tmp/install-spago.sh
 
-FROM debian:bookworm-slim
+FROM debian:stable-20230814-slim
 
 ENV LANG="C.UTF-8" LANGUAGE="C.UTF-8" LC_ALL="C.UTF-8"
 
@@ -18,5 +18,5 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get clean
 
 RUN npm install -g npm@9.8.1
-RUN npm install -g purescript@0.15.10 purescript-psa@0.8.2 grunt@1.6.1 esbuild@0.18.17
+RUN npm install -g purescript@0.15.10 purescript-psa@0.8.2 grunt@1.6.1 esbuild@0.19.2
 COPY --from=builder /root/.local/bin/spago /usr/local/bin/spago

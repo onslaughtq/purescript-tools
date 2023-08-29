@@ -16,7 +16,7 @@ esac
 
 
 RELEASE_DATE=$(date '+%Y-%m-%d')
-TAG_ROOT="ghcr.io/flipstone/purescript-tools:debian-bookworm-purescript-0.15.10-$RELEASE_DATE-$COMMIT_SHA"
+TAG_ROOT="ghcr.io/flipstone/purescript-tools:debian-stable-purescript-0.15.10-$RELEASE_DATE-$COMMIT_SHA"
 ARM_TAG="$TAG_ROOT"-arm64
 AMD_TAG="$TAG_ROOT"-amd64
 ARCH=$(uname -m)

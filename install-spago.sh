@@ -8,5 +8,4 @@ cd ~/spago
 
 git checkout 0.21.0
 
-make
 make install
