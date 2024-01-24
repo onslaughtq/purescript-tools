@@ -5,7 +5,7 @@ ENV LANG="C.UTF-8" LANGUAGE="C.UTF-8" LC_ALL="C.UTF-8"
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y -qq --no-install-recommends \
-      ca-certificates curl lsb-release gnupg apt-transport-https git && \
+      ca-certificates curl lsb-release gnupg apt-transport-https git openssh-client && \
     apt-get clean
 
 RUN mkdir -p /etc/apt/keyrings
