@@ -17,5 +17,7 @@ RUN apt-get update && \
     apt-get install -qq -y --no-install-recommends nodejs && \
     apt-get clean
 
+RUN mkdir -p ~/.ssh/ && ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
+
 RUN npm install -g npm@10.2.3
 RUN npm install -g spago@next purescript@0.15.12 purescript-psa@0.8.2 grunt-cli@1.4.3 esbuild@0.19.5
