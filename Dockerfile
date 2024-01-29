@@ -1,4 +1,4 @@
-FROM debian:stable-20230814
+FROM debian:stable-20240110
 
 ENV LANG="C.UTF-8" LANGUAGE="C.UTF-8" LC_ALL="C.UTF-8"
 
